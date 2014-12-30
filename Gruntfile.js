@@ -21,6 +21,9 @@ module.exports = function(grunt) {
 				dest: 'dist/'
 			}
 		},
+		clean: {
+			all: ['dist/**'],
+		},
 		watch: {
 			everything: {
 				files: ['templates/**', 'content/**'],
@@ -43,9 +46,10 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['copy:assets', 'assemble']);
+	grunt.registerTask('default', ['clean', 'copy:assets', 'assemble']);
 };
