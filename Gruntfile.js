@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 		assemble: {
 			options: {
 				flatten: true,
+				layout: "templates/default.hbs",
 			},
 			pages: {
 				files: {
