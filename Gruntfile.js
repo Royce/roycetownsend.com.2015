@@ -25,12 +25,26 @@ module.exports = function(grunt) {
 			everything: {
 				files: ['templates/**', 'content/**'],
 				tasks: ['default'],
+				options: {
+					livereload: true
+				},
 			},
+		},
+		connect: {
+			server: {
+				options: {
+					port: 3000,
+					base: 'dist/',
+					keepalive: true,
+					livereload: true,
+				}
+			}
 		},
 	});
 
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['copy:assets', 'assemble']);
