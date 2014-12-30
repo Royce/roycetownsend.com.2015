@@ -1,3 +1,7 @@
+---
+body-class: index
+---
+
 # Royce Townsend is a generous and thoughtful person living in Perth, Australia.
 
 Royce is a programmer.

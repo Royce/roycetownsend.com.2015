@@ -61,17 +61,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background-color: #eee;
+    color: #333;
+}
 
+h1 {
+    font-weight: lighter;
+    line-height: 1.1em;
+}
 
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
 
-
-
-
-
-
-
-
-
+.index .profile img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 
@@ -82,6 +91,40 @@ textarea {
 @media only screen and (min-width: 35em) {
 
 }
+
+@media (min-width: 700px) {
+    .index .wrapper {
+        width: auto;
+        margin-right: 55%;
+    }
+    .index .profile {
+        position: absolute;
+        top: 1.5em;
+        right: 5%;
+        width: 45%;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+    .index .wrapper {
+        width: 310px;
+        padding-right: 716px; /* 666 + 50 margin */
+        margin: 0 auto;
+        position: relative;
+    }
+    .index .profile {
+        width: 666px;
+        top: 0; right: 0;
+    }
+}
+
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
