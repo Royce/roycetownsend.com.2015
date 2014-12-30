@@ -19,7 +19,13 @@ module.exports = function(grunt) {
 				cwd: 'templates',
 				src: ['**', '!*.hbs'],
 				dest: 'dist/'
-			}
+			},
+			content: {
+				expand: true,
+				cwd: 'content',
+				src: ['img/*.*', 'files/*.*'],
+				dest: 'dist/',
+			},
 		},
 		clean: {
 			all: ['dist/**'],
@@ -69,6 +75,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['clean', 'copy:assets', 'assemble']);
+	grunt.registerTask('default', ['clean', 'copy', 'assemble']);
 	grunt.registerTask('deploy', ['aws_s3:production'])
 };
