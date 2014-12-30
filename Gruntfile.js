@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		assemble: {
 			options: {
+				assets: 'dist',
 				flatten: true,
 				layout: "templates/default.hbs",
 			},
@@ -12,9 +13,18 @@ module.exports = function(grunt) {
 				},
 			},
 		},
+		copy: {
+			assets: {
+				expand: true,
+				cwd: 'templates',
+				src: ['**', '!*.hbs'],
+				dest: 'dist/'
+			}
+		},
 	});
 
 	grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['assemble']);
+	grunt.registerTask('default', ['copy:assets', 'assemble']);
 };
