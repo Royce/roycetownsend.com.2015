@@ -43,13 +43,32 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		aws: grunt.file.readJSON('aws-credentials.json'),
+		aws_s3: {
+			options: {
+				accessKeyId: '<%= aws.AWSAccessKeyId %>',
+				secretAccessKey: '<%= aws.AWSSecretKey %>',
+				region: 'us-east-1',
+				uploadConcurrency: 5,
+				downloadConcurrency: 5,
+				bucket: 'roycetownsend.com',
+				differential: true,
+			},
+			production: {
+				expand: true,
+				cwd: 'dist/',
+				src: ['**'],
+			},
+		}
 	});
 
 	grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-aws-s3');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['clean', 'copy:assets', 'assemble']);
+	grunt.registerTask('deploy', ['aws_s3:production'])
 };
