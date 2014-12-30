@@ -21,10 +21,17 @@ module.exports = function(grunt) {
 				dest: 'dist/'
 			}
 		},
+		watch: {
+			everything: {
+				files: ['templates/**', 'content/**'],
+				tasks: ['default'],
+			},
+		},
 	});
 
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['copy:assets', 'assemble']);
 };
