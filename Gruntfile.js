@@ -8,9 +8,10 @@ module.exports = function(grunt) {
 				layout: "templates/default.hbs",
 			},
 			pages: {
-				files: {
-					'dist/': ['content/*.md']
-				},
+				expand: true,
+				cwd: 'content',
+				src: ['**/*.md'],
+				dest: 'dist/',
 			},
 		},
 		copy: {
@@ -23,7 +24,7 @@ module.exports = function(grunt) {
 			content: {
 				expand: true,
 				cwd: 'content',
-				src: ['img/*.*', 'files/*.*'],
+				src: ['**/img/*.*', 'files/*.*'],
 				dest: 'dist/',
 			},
 			bower: {
