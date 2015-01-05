@@ -7,11 +7,6 @@
 - Node and NPM. I installed these using boxen (which uses home-brew). `node --version` yields `v0.10.31`. `npm --version` yields `1.4.23`.
 - Grunt. Grunt is a thing that does stuff; like Make, but NodeJS and with lots of useful plugins.
 
-<div class="more">
-	<h3>What is grunt</h3>
-	<p>Gruntt is</p> 
-</div>
-
 ```bash
 npm install -g grunt-cli
 grunt --version
