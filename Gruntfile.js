@@ -26,6 +26,13 @@ module.exports = function(grunt) {
 				src: ['img/*.*', 'files/*.*'],
 				dest: 'dist/',
 			},
+			bower: {
+				files: [
+					{'dist/css/syntax.css': [
+						'bower_components/highlight/src/styles/solarized_dark.css'
+					]}
+				]
+			},
 		},
 		clean: {
 			all: ['dist/**'],
