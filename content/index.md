@@ -11,5 +11,5 @@ When I am not programming (and am awake) I can be found swing dancing, rock-clim
 You could [read my resume]({{assets}}/files/Resume-RoyceTownsend.pdf). I've kept it brief.
 
 <div class="profile">
-	![Profile of Royce with messy hair and a receding hairline, wearing a green shirt. There is purple wall in the background.]({{assets}}/img/Profile.jpg)
+	![Profile of Royce with messy hair and a receding hairline, wearing a green shirt. There is purple wall in the background.](img/Profile.jpg)
 </div>
