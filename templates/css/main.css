@@ -71,6 +71,15 @@ h1 {
     font-weight: lighter;
     line-height: 1.1em;
 }
+h2 {
+    margin-top: 2.5em;
+}
+h2+h3{
+    margin-top: 1em;
+}
+h3{
+    margin-top: 2em;
+}
 
 .wrapper {
     width: 90%;
@@ -81,6 +90,17 @@ img,
 .index .profile img {
     max-width: 100%;
     height: auto;
+}
+
+.side-content .more {
+    border-left: 1em solid #3cf;
+    padding-left: 0.6em;
+    font-size: 0.8em;
+    color: #666
+}
+.side-content .more h3 {
+    margin-top: 0; 
+    margin-bottom: -1em;
 }
 
 .footer {
@@ -123,6 +143,20 @@ img,
         border: 1px solid #ccc;
         background-color: #fff;
         padding: 5px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .side-content .wrapper {
+        padding-right: 35%;
+        width: 55%
+    }
+    .side-content .more {
+        position: relative;
+        top: -7em;
+        right: -70%;
+        float: right;
+        width: 60%;
     }
 }
 

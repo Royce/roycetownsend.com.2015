@@ -1,11 +1,22 @@
+---
+body-class: side-content
+---
+
 # Tutorial: Making a website (like this) using GruntJS and assemble
 
 
 ## Pre-requisites
 
-- An Apple Mac. I'm doing this using bash in a terminal on Mac OS X `10.10`.
-- Node and NPM. I installed these using boxen (which uses home-brew). `node --version` yields `v0.10.31`. `npm --version` yields `1.4.23`.
-- Grunt. Grunt is a thing that does stuff; like Make, but NodeJS and with lots of useful plugins.
+I'm doing this using the "Terminal" app on Mac OS X `10.10`. All you actually need is:
+
+- Node (I have `v0.10.31`) and NPM (I have `1.4.23`).
+- Grunt.
+
+<div class="more">
+	<h3>What is grunt?</h3>
+	<p>[Grunt](http://gruntjs.com) is a build automation tool (like Make or MSBuild). Grunt is great for copying, renaming, concatinating, compiling, minifying, etc. all of the HTML, CSS and Javascript files that make up your website.</p>
+	<p>Grunt is a task runner. It can start a webserver, run tests, watch your files for changes, anything!</p>
+</div>
 
 ```bash
 npm install -g grunt-cli
