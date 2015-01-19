@@ -81,6 +81,15 @@ h3{
     margin-top: 2em;
 }
 
+a[href^="http:"] {
+    text-decoration: none;
+    color: #666;
+    border-bottom: 1px dotted #3cf;
+}
+a[href^="http:"]:visited {
+    color: #333;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 5%;
