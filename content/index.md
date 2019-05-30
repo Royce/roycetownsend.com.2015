@@ -2,11 +2,11 @@
 body-class: index
 ---
 
-# Royce Townsend is a generous and thoughtful person living in Perth, Australia.
+# Royce Townsend is a laconic nerd person living in Perth, Australia.
 
-Royce is a programmer.
+Royce is a programmer. Royce is a DJ.
 
-When I am not programming (and am awake) I can be found swing dancing, rock-climbing, cycling, running, juggling, fire twirling, playing boardgames, enjoying music, drinking coffee, gardening, or reading a book.
+When I am not programming (and am awake) I can be found swing dancing, rock-climbing, cycling, running, juggling, fire twirling, playing boardgames, enjoying music, drinking coffee, gardening, or listening to a book.
 
 You could [read my resume]({{assets}}/files/Resume-RoyceTownsend.pdf). I've kept it brief.
 
