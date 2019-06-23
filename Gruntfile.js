@@ -66,10 +66,18 @@ module.exports = function(grunt) {
 				uploadConcurrency: 5,
 				downloadConcurrency: 5,
 				bucket: 'roycetownsend.com',
-				differential: true,
+				// debug: true,
 			},
 			production: {
+				differential: true,
 				expand: true,
+				cwd: 'dist/',
+				src: ['**'],
+			},
+			production_clean: {
+				differential: true,
+				dest: '/',
+				action: 'delete',
 				cwd: 'dist/',
 				src: ['**'],
 			},
@@ -84,5 +92,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['clean', 'copy', 'assemble']);
-	grunt.registerTask('deploy', ['aws_s3:production'])
+	grunt.registerTask('deploy', ['aws_s3:production', 'aws_s3:production_clean'])
 };
